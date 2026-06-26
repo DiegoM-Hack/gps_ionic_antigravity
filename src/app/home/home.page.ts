@@ -1,12 +1,20 @@
 import { Component } from '@angular/core';
-import { IonHeader, IonToolbar, IonTitle, IonContent } from '@ionic/angular/standalone';
+import { CommonModule } from '@angular/common';
+import { Geolocation } from '@capacitor/geolocation';
+import {IonButton, IonTitle, IonCardContent, IonToolbar, IonContent, IonHeader} from '@ionic/angular/standalone';
 
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
-  styleUrls: ['home.page.scss'],
-  imports: [IonHeader, IonToolbar, IonTitle, IonContent],
+  imports: [IonButton, IonTitle, 
+    IonCardContent, IonToolbar, 
+    IonContent, IonHeader, CommonModule]
 })
 export class HomePage {
-  constructor() {}
+  coords: any;
+
+  async obtenerUbicacion() {
+    const coordinates = await Geolocation.getCurrentPosition();
+    this.coords = coordinates.coords;
+  }
 }
