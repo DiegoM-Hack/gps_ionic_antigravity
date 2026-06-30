@@ -187,10 +187,8 @@ En cuanto a las herramientas de IA, Codex produjo código más preciso y alinead
 
 **Diego Montaluisa**
 
-Universidad: ______________________
+Universidad: Escuela Politecnica Nacional
 
 Materia: Desarrollo de Aplicaciones Móviles
-
-Docente: ______________________
 
 Período académico: 2026
